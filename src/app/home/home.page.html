@@ -1,20 +1,37 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+  <ion-row>
+    <div *ngFor="let key of [0,1,2,3]" [ngClass]="'poke-lamp'+key">
+      <div id="lamp-shadow">
+        <div id="lamp-lux">
+          <div id="lamp-bright"></div>
+        </div>
+      </div>
+    </div>
+  </ion-row>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="pokedex-display-border">
+    <ion-row id="display-top" class="ion-justify-content-center">
+      <div class="little-red-circle"></div>
+      <div class="little-red-circle"></div>
+    </ion-row>
+    <div id="container">
+      <ion-searchbar color="black" placeholder="Search here" (ionInput)="searchPokemons($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item (click)="pokemonDetail(pokemon)" class="pokemon-list-item" *ngFor="let pokemon of results">
+          <ion-thumbnail slot="start">
+            <img alt="Pokemon" [src]="pokemon.image" />
+          </ion-thumbnail>
+          <ion-label>{{ pokemon.name }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-row id="display-bottom" class="ion-justify-content-between">
+      <div style="margin-left:10%;" class="little-red-circle"></div>
+      <div class="bottom-icon">
+        <ion-icon style="font-size: 30px;color: black;" name="reorder-four-outline"></ion-icon>
+      </div>
+    </ion-row>
   </div>
 </ion-content>

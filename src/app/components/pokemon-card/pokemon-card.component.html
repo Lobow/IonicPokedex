@@ -1,0 +1,19 @@
+<ion-card class="pokemon-card" color="dark">
+  <ion-row>
+    <p class="order-number">#{{pokemonDetail.order}}</p>
+    <ion-icon class="type-icon" [src]="iconUrl"></ion-icon>
+    <img alt="Pokemon" [src]="pokemonDetail.image" />
+  </ion-row>
+  <ion-card-header>
+    <ion-card-title>{{pokemonDetail.name}}</ion-card-title>
+    <ion-card-subtitle>
+      <ion-row>
+        Type:<p [ngStyle]="{'color':typeColor}">{{pokemonDetail.type}}</p>
+      </ion-row>
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <p>Height:{{pokemonDetail.height}}<b>cm</b></p>
+    <p>Weight:{{pokemonDetail.weight}}<b>kg</b></p>
+  </ion-card-content>
+</ion-card>

@@ -24,3 +24,31 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: arcade;
+  src: url(assets/fonts/arcade.ttf) format('truetype');
+}
+
+*{
+  font-family: arcade;
+  color: white;
+}
+
+
+ion-searchbar {
+  .searchbar-input-container {
+      input{
+          font-size: 8px !important;
+      }
+  }
+}
+
+
+.pokemon-detail{
+  --height: 208px;
+  --width: 60%;
+  --border-radius: 5px !important;
+  --background: black;
+
+}

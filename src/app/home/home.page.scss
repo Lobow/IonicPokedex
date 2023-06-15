@@ -1,27 +1,217 @@
-#container {
-  text-align: center;
+ion-toolbar,
+ion-content {
+  --background: #dc0a2d;
+}
 
-  position: absolute;
-  left: 0;
+ion-header {
+  height: 100px;
+}
+
+.poke-lamp0 {
+  margin: 15px;
+  background: #29a8fd;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 2px 4px 5px rgba(0, 0, 0, 0.2), 0 4px 5px 2px rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+
+  #lamp-shadow {
+    background: #196a9f;
+    border-radius: 50%;
+    margin: 9px 0px 0px 8px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+
+    #lamp-lux {
+      background: #29a8fd;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+
+      #lamp-bright {
+        background: #a4dbfb;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        margin: 8px 0px 0px 8px;
+      }
+    }
+  }
+}
+
+
+.poke-lamp1 {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 20px 10px 10px 15px;
+  background: #d80f31;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+
+  #lamp-shadow {
+    background: #e72d4c;
+    border-radius: 50%;
+    margin: 3px 0px 0px 2px;
+    position: absolute;
+    width: 12px;
+    height: 10px;
+
+    #lamp-lux {
+      background: #d80f31;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+
+      #lamp-bright {
+        background: #ff798d;
+        border-radius: 50%;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        margin: 2px 0px 0px 2px;
+      }
+    }
+  }
+}
+
+
+.poke-lamp2 {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 20px 10px 10px 15px;
+  background: #a39311;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+
+  #lamp-shadow {
+    background: #f5d328;
+    border-radius: 50%;
+    margin: 3px 0px 0px 2px;
+    position: absolute;
+    width: 12px;
+    height: 10px;
+
+    #lamp-lux {
+      background: #a39311;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+
+      #lamp-bright {
+        background: #fde85c;
+        border-radius: 50%;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        margin: 2px 0px 0px 2px;
+      }
+    }
+  }
+}
+
+.poke-lamp3 {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 20px 10px 10px 15px;
+  background: #347c49;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+
+  #lamp-shadow {
+    background: #499459;
+    border-radius: 50%;
+    margin: 3px 0px 0px 2px;
+    position: absolute;
+    width: 12px;
+    height: 10px;
+
+    #lamp-lux {
+      background: #347c49;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+
+      #lamp-bright {
+        background: #8dd298;
+        border-radius: 50%;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        margin: 2px 0px 0px 2px;
+      }
+    }
+  }
+}
+
+.pokedex-display-border {
+  height: 555px;
+  width: 90%;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: auto;
+  margin-top: 20px;
+  left: 0;
+  background: #e0e0e0;
+  box-shadow: 0 2px 4px 5px rgba(0, 0, 0, 0.2), 0 4px 5px 2px rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  position: absolute;
+  border-radius: 5px 5px 5px 40px;
+  border: 1px solid black;
+
+  #container {
+    box-shadow: 0 2px 4px 5px rgba(0, 0, 0, 0.2), 0 4px 5px 2px rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+
+    ion-searchbar {
+      border-radius: 5px;
+    }
+
+    position: relative;
+    height: 470px !important;
+    width: 80%;
+    background: black !important;
+    border-radius: 5px;
+    margin: 10px 30px 30px 30px !important;
+
+    ion-list {
+      height: calc(100% - 58px);
+      width: 100%;
+      background: black;
+      overflow: scroll;
+      border-radius: 5px;
+
+      ion-item {
+        --ion-item-background: black !important;
+
+        ion-label {
+          font-family: arcade;
+          font-size: 8px;
+        }
+      }
+    }
+
+  }
+
+  #display-top {
+    padding-top: 15px;
+  }
+
+  #display-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.little-red-circle {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 5px;
+  background: #d80f31;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.bottom-icon {
+  margin-right: 8%;
 }
